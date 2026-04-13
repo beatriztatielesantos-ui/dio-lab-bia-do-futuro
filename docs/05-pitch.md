@@ -13,3 +13,6 @@ O grande diferencial é que ele não apenas responde, mas orienta, guia e apoia 
 Com isso, aumentamos o engajamento, aceleramos o desenvolvimento e tornamos o aprendizado mais estratégico.
 
 Esse é o futuro da educação corporativa com IA.
+
+
+Além disso, o agente pode evoluir para integração com LMS e dados reais da empresa, tornando-se uma ferramenta estratégica de desenvolvimento organizacional.
