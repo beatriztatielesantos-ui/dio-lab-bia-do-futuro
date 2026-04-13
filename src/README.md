@@ -1,31 +1,31 @@
-# Código da Aplicação
+import streamlit as st
+import json
 
-Esta pasta contém o código do seu agente financeiro.
+st.set_page_config(page_title="Mentor de Desenvolvimento", layout="centered")
 
-## Estrutura Sugerida
+st.title("🤖 Mentor de Desenvolvimento Corporativo")
 
-```
-src/
-├── app.py              # Aplicação principal (Streamlit/Gradio)
-├── agente.py           # Lógica do agente
-├── config.py           # Configurações (API keys, etc.)
-└── requirements.txt    # Dependências
-```
+st.write("Descreva seu objetivo de carreira ou desenvolvimento:")
 
-## Exemplo de requirements.txt
+# carregar perfil
+with open("data/perfil_investidor.json") as f:
+    perfil = json.load(f)
 
-```
-streamlit
-openai
-python-dotenv
-```
+pergunta = st.text_input("Ex: Quero me tornar líder")
 
-## Como Rodar
+if pergunta:
+    st.subheader("📊 Análise do seu perfil")
+    st.write(f"Cargo atual: {perfil.get('cargo', 'Não informado')}")
+    st.write(f"Objetivo: {perfil.get('objetivo', 'Não informado')}")
 
-```bash
-# Instalar dependências
-pip install -r requirements.txt
+    st.subheader("📚 Recomendações")
+    st.write("- Comunicação Efetiva")
+    st.write("- Fundamentos de Liderança")
+    st.write("- Inteligência Emocional")
 
-# Rodar a aplicação
-streamlit run app.py
-```
+    st.subheader("📈 Plano de ação")
+    st.write("1. Desenvolver habilidades de comunicação")
+    st.write("2. Participar de projetos colaborativos")
+    st.write("3. Buscar feedback constante")
+
+    st.success("💡 Dica: Comece com pequenos passos e evolua continuamente!")
