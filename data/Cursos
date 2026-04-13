@@ -1,0 +1,3 @@
+# exemplo lógico
+if curso not in cursos_ja_feitos:
+    recomendar
